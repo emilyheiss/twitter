@@ -32,9 +32,9 @@ class TweetCellTableViewCell: UITableViewCell {
     }
    
     func setRetweet(_ isRetweeted:Bool) {
-        if (isRetweeted) {
+        retweeted = isRetweeted
+        if (retweeted) {
             retweetButton.setImage(UIImage(named: "retweet-icon-green"), for: UIControl.State.normal)
-            retweetButton.isEnabled = false
         }
         else {
             retweetButton.setImage(UIImage(named: "retweet-icon"), for: UIControl.State.normal)
